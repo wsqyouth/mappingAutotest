@@ -1,0 +1,18 @@
+  raw_request_field: 'Shipment.PickupAddress1'
+  from_shipping_request_fields: ['shipment.ship_from']
+  test_case:
+    - condition: '{
+			"shipment": {
+				"ship_from": {
+					"street1": "1863",
+					"street2": "S. 3850 W.",
+					"street3": "Salt Lake City"
+				},
+				"ship_to": {
+					"street1": "1863to",
+					"street2": "S. 3850 W.to",
+					"street3": "Salt Lake City to"
+				}
+			}
+		}'
+      then: '1863'
